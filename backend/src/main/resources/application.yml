@@ -2,6 +2,11 @@ server:
   port: 9100
 
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://my-auth-server.com
   h2:
     console:
       enabled: true
