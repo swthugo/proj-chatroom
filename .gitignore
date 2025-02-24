@@ -13,3 +13,5 @@ service-account.json
 
 # EC2 key pair pem
 ec2-key-pair.pem
+
+data
