@@ -14,10 +14,10 @@ public class ChatbotApplication {
         SpringApplication.run(ChatbotApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner commandLineRunner(DatabaseService databaseService) {
-        return args -> {
-            databaseService.createTable();
-        };
-    }
+//    @Bean
+//    CommandLineRunner commandLineRunner(DatabaseService databaseService) {
+//        return args -> {
+//            databaseService.createTable();
+//        };
+//    }
 }

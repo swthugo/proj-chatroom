@@ -1,0 +1,12 @@
+Configuration:
+  status: WARN
+  Appenders:
+    Console:
+      name: Console
+      PatternLayout:
+        pattern: "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n"
+  Loggers:
+    Root:
+      level: DEBUG
+      AppenderRefs:
+        - ref: Console
