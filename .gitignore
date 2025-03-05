@@ -1,5 +1,6 @@
 # IntelliJ File
 .idea
+_backup
 
 # Environment variables
 .env.*
