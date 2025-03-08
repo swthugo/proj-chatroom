@@ -9,12 +9,8 @@ import java.time.LocalDateTime;
 @Builder
 public class Room {
   private Long id;
-
   private String name;
-
   private boolean isGroup;
-
   private LocalDateTime createAt;
-
   private Long createBy;
 }

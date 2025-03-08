@@ -10,16 +10,10 @@ import java.time.LocalDateTime;
 @Builder
 public class Account {
   private Long id;
-
   private String username;
-
   private String phoneNumber;
-
   private String salt;
-
   private String passwordHash;
-
   private LocalDateTime createAt;
-
   private LocalDateTime lastSeen;
 }

@@ -8,10 +8,7 @@ import lombok.Data;
 @Builder
 public class AccountRoom {
   private Long id;
-
   private Account account;
-
   private Room room;
-
   private Role role;
 }
