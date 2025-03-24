@@ -5,14 +5,13 @@ import jakarta.persistence.Table;
 import lombok.Builder;
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 @Data
 @Builder
 @Entity
-@Table(name = "room")
-public class Room {
+@Table(name = "profile")
+public class Profile {
     private Long id;
-    private String name;
-    private LocalDateTime createAt;
+    private Account accountId;
+    private String profile_picture;
+    private String status;
 }
