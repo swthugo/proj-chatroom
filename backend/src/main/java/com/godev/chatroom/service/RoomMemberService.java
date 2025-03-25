@@ -16,7 +16,7 @@ public class RoomMemberService {
         return roomMemberRepository.save(roomMember);
     }
 
-    public List<RoomMember> getMemberByRoomId(Long roomId) {
+    public List<RoomMember> getMembersByRoomId(Long roomId) {
         return roomMemberRepository.findByRoomId(roomId);
     }
 }

@@ -1,7 +1,14 @@
 package com.godev.chatroom.model;
 
-public class RoomMember {
-    private Long id;
-    private Room roomId;
-    private Account accountId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "room_member")
+public class RoomMember extends AbstractPersistentEntity {
+
+    private Room room;
+    @OneToOne
+    private Account account;
 }
