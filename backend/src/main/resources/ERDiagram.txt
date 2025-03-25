@@ -1,0 +1,37 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table Account {
+  id integer [primary key]
+  phone varchar
+  password varchar
+}
+Table Profile {
+  id integer [primary key]
+  accountId primary
+  profile_picture varchar
+  status varchar
+}
+
+Table Message {
+  id integer [primary key]
+  sender varchar
+  reciever varchar
+  content varchar
+  isRead boolean
+  chatId long
+}
+
+Table Room {
+  id integer [primary key]
+  title varchar
+  body text [note: 'Content of the post']
+  user_id integer [not null]
+  status varchar
+  created_at timestamp
+}
+
+Ref: Account.id - Profile.id
+Ref: Message.sender > Account.id
+Ref: Message.reciever > Account.id
+
