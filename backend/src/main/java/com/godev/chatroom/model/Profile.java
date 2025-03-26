@@ -10,7 +10,7 @@ import lombok.Setter;
 @Table(name = "profile")
 public class Profile extends AbstractAuditableEntity<Profile, Long> {
     @OneToOne
-    @JoinColumn(name = "accountId", nullable = false)
+    @JoinColumn(name = "account_id", nullable = false)
     private Account account;
 
     @Column

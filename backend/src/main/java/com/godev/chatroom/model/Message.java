@@ -7,7 +7,6 @@ import lombok.EqualsAndHashCode;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -33,6 +32,6 @@ public class Message extends AbstractAuditableEntity<Message, Long> {
     private boolean isRead;
 
     @ManyToOne
-    @JoinColumn(name = "roomId", nullable = false)
+    @JoinColumn(name = "room_id", nullable = false)
     private Room room;
 }
