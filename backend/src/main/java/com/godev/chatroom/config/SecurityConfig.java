@@ -16,8 +16,9 @@ public class SecurityConfig {
             .csrf(AbstractHttpConfigurer::disable)
             .formLogin(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/public/**").permitAll()
-                .anyRequest().authenticated());
+//                .requestMatchers("/h2-console/**").permitAll()
+//                .requestMatchers("/public/**").permitAll()
+                .anyRequest().permitAll());
         return http.build();
     }
 }

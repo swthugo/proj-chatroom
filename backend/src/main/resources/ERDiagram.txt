@@ -8,18 +8,18 @@ Table Account {
 }
 Table Profile {
   id integer [primary key]
-  accountId primary
+  accountId integer [not null]
   profile_picture varchar
   status varchar
 }
 
 Table Message {
   id integer [primary key]
-  sender varchar
-  receiver varchar
+  sender_id integer [not null]
+  receiver_id integer [not null]
   content varchar
   isRead boolean
-  chatId long
+  roomId integer [not null]
 }
 
 Table Room {
@@ -33,13 +33,11 @@ Table Room {
 
 Table RoomMember{
   memberId integer
-
-  rooId integer
+  roomId integer
 }
 
 Ref: Account.id - Profile.id
-Ref: Message.sender > Account.id
-Ref: Message.receiver > Account.id
-Ref: RoomMember.rooId > Room.id
+Ref: Message.sender_id > Account.id
+Ref: Message.receiver_id > Account.id
+Ref: RoomMember.roomId > Room.id
 Ref: RoomMember.memberId > Account.id
-
