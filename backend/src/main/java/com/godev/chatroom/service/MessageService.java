@@ -16,7 +16,7 @@ public class MessageService {
         return messageRepository.save(message);
     }
 
-    public List<Message> getMessagesByRoomId(Long roomId) {
-        return messageRepository.findByRoomId(roomId);
-    }
+//    public List<Message> getMessagesByRoomId(Long roomId) {
+//        return messageRepository.findByRoomId(roomId);
+//    }
 }

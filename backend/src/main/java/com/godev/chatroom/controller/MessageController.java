@@ -20,9 +20,9 @@ public class MessageController {
         return ResponseEntity.ok(sentMessage);
     }
 
-    @GetMapping("/room/{roomId}")
-    public ResponseEntity<List<Message>> getMessagesByRoomId(@PathVariable Long roomId) {
-        List<Message> messages = messageService.getMessagesByRoomId(roomId);
-        return ResponseEntity.ok(messages);
-    }
+//    @GetMapping("/room/{roomId}")
+//    public ResponseEntity<List<Message>> getMessagesByRoomId(@PathVariable Long roomId) {
+//        List<Message> messages = messageService.getMessagesByRoomId(roomId);
+//        return ResponseEntity.ok(messages);
+//    }
 }

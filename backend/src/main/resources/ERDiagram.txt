@@ -16,7 +16,7 @@ Table Profile {
 Table Message {
   id integer [primary key]
   sender varchar
-  reciever varchar
+  receiver varchar
   content varchar
   isRead boolean
   chatId long
@@ -31,7 +31,15 @@ Table Room {
   created_at timestamp
 }
 
+Table RoomMember{
+  memberId integer
+
+  rooId integer
+}
+
 Ref: Account.id - Profile.id
 Ref: Message.sender > Account.id
-Ref: Message.reciever > Account.id
+Ref: Message.receiver > Account.id
+Ref: RoomMember.rooId > Room.id
+Ref: RoomMember.memberId > Account.id
 

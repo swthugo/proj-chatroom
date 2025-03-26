@@ -1,14 +1,33 @@
-package com.godev.chatroom.model;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name = "room_member")
-public class RoomMember extends AbstractPersistentEntity {
-
-    private Room room;
-    @OneToOne
-    private Account account;
-}
+//package com.godev.chatroom.model;
+//
+//import jakarta.persistence.*;
+//import lombok.AllArgsConstructor;
+//import lombok.Builder;
+//import lombok.Data;
+//import lombok.NoArgsConstructor;
+//import org.hibernate.annotations.OnDelete;
+//import org.hibernate.annotations.OnDeleteAction;
+//
+//@Data
+//@Entity
+//@Builder
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@Table(name = "room_member")
+//public class RoomMember {
+//
+//    @Id
+//    private RoomMemberId id;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "roomId", nullable = false)
+//    @MapsId("roomId")
+//    @OnDelete(action = OnDeleteAction.CASCADE)
+//    private Room room;
+//
+//    @ManyToOne
+//    @JoinColumn
+//    @MapsId("accountId")
+//    @OnDelete(action = OnDeleteAction.CASCADE)
+//    private Account account;
+//}

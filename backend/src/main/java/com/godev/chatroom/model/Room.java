@@ -6,6 +6,7 @@ import jakarta.persistence.Table;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
 
@@ -14,10 +15,7 @@ import java.time.LocalDateTime;
 @Builder
 @Entity
 @Table(name = "room")
-public class Room extends AbstractPersistentEntity<Room>{
+public class Room extends AbstractAuditableEntity<Room, Long> {
     @Column
     private String name;
-
-    @Column
-    private LocalDateTime createAt;
 }
