@@ -1,16 +1,16 @@
-package com.godev.chatroom.config;
-
-import lombok.Setter;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
-
-@Setter
-@Configuration
-@ConfigurationProperties(prefix = "cors")
-public class CorsProperties {
-    private String allowedOrigins;
-
-    public String[] getAllowedOrigins() {
-        return allowedOrigins.split(",");
-    }
-}
+//package com.godev.chatroom.config;
+//
+//import lombok.Setter;
+//import org.springframework.boot.context.properties.ConfigurationProperties;
+//import org.springframework.context.annotation.Configuration;
+//
+//@Setter
+//@Configuration
+//@ConfigurationProperties(prefix = "cors")
+//public class CorsProperties {
+//    private String allowedOrigins;
+//
+//    public String[] getAllowedOrigins() {
+//        return allowedOrigins.split(",");
+//    }
+//}
